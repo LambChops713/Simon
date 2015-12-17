@@ -1,4 +1,4 @@
-package Simon;
+package RenderingScratch;
 
 // this program will have a second button to change the background colour.
 import java.awt.*;

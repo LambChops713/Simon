@@ -1,4 +1,4 @@
-package simon;
+package Game;
 
 import java.io.FileNotFoundException;
 

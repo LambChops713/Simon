@@ -1,4 +1,4 @@
-package simon;
+package Game;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,7 +12,7 @@ public class PanMain extends JPanel {
     public PanMain() {
         setLayout(new BorderLayout()); 
         add(panGame, BorderLayout.CENTER);
-        add(panTitle, BorderLayout.NORTH);
+//        add(panTitle, BorderLayout.NORTH);
         add(panProgressBar, BorderLayout.SOUTH);
     }
 }

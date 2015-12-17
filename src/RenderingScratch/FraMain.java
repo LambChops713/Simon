@@ -1,4 +1,4 @@
-package simon;
+package RenderingScratch;
 
 import javax.swing.JFrame;
 

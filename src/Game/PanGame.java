@@ -1,4 +1,4 @@
-package simon;
+package Game;
 
 // this program will have a second button to change the background colour.
 import java.awt.*;
@@ -20,8 +20,11 @@ public class PanGame extends JPanel {
         ColourListener colourListener = new ColourListener();
 
         btn2x2 = new JButton("2 X 2");
+        btn2x2.setForeground(new Color(255, 0, 0));
         btn3x3 = new JButton("3 X 3");
+        btn3x3.setForeground(new Color(0, 0, 204));
         btn4x4 = new JButton("4 X 4");
+        btn4x4.setForeground(new Color(76, 0, 153));
         btnExit = new JButton("EXIT");
 
         btn2x2.addActionListener(colourListener);

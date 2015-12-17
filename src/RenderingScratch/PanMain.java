@@ -1,4 +1,4 @@
-package Simon;
+package RenderingScratch;
 
 import javax.swing.*;
 import java.awt.*;
