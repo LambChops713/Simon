@@ -14,7 +14,6 @@ public class PanMainMenu extends JPanel {
     JButton btn3x3;
     JButton btn4x4;
     JButton btnExit;
-  
 
     public PanMainMenu() { //http://stackoverflow.com/questions/5732058/best-swing-layout-for-2-dimensional-grid-of-buttons
         System.out.println("PanMainMenu");
@@ -61,7 +60,9 @@ public class PanMainMenu extends JPanel {
         public void actionPerformed(ActionEvent event) {
             JButton btn = (JButton) event.getSource();
             if (btn.getText().equals("2 X 2")) {
-                 PanEasy panEasy = new PanEasy();
+                PanEasy panEasy = new PanEasy();
+                Window w = SwingUtilities.getWindowAncestor(PanMainMenu.this); //http://stackoverflow.com/questions/10936306/programmatically-close-a-jpanel-which-is-displayed-in-jdialog
+                w.setVisible(false);
             } else if (btn.getText().equals("3 X 3")) {
                 setBackground(new Color(0, 0, 204));
             } else if (btn.getText().equals("4 X 4")) {
