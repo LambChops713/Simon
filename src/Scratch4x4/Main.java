@@ -1,4 +1,4 @@
-package TrueSimon1;
+package Scratch4x4;
 //Expand the page after clicking the buttons
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -8,10 +8,10 @@ import sun.audio.AudioStream;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException { 
-        System.out.println("Main");
+    public static void main(String[] args) throws IOException {
         FraMain fraMain = new FraMain();
-        String Pump = "CoolMusic.wav"; //George and David's code
+        fraMain.buttonFlash(fraMain);
+        String Pump = "CoolMusic.wav";
         InputStream in = new FileInputStream("CoolMusic.wav");
         AudioStream audioStream = new AudioStream(in);
         AudioPlayer.player.start(audioStream);

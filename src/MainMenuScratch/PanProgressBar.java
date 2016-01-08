@@ -1,15 +1,17 @@
-package TrueSimon1;
+package MainMenuScratch;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class PanProgressBar extends JPanel 
-{
+public class PanProgressBar extends JPanel {
+
     int nProgress;
     private JProgressBar progressBar;
+
     public PanProgressBar() {
-        System.out.println("PanProgressBar");
+        System.out.println("Progress");
         progressBar = new JProgressBar();
         setBackground(Color.black);
         nProgress = 0;

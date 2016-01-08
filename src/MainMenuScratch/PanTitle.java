@@ -1,4 +1,4 @@
-package TrueSimon1;
+package MainMenuScratch;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,7 +11,6 @@ public class PanTitle extends JPanel {
     JLabel lblHeader;
 
     public PanTitle() {
-         System.out.println("PanTitle");
         setBackground(Color.black);
         lblHeader = new JLabel();
         imgHeader = new ImageIcon("Simon Logo.jpg");

@@ -1,4 +1,4 @@
-package TrueSimon1;
+package MainMenuImplementScratchDOESNOTCLOSE;
 
 // this program will have a second button to change the background colour.
 import java.awt.*;
@@ -14,11 +14,11 @@ public class PanMainMenu extends JPanel {
     JButton btn3x3;
     JButton btn4x4;
     JButton btnExit;
-
+    public GameTypeListener gameTypeListener;
     public PanMainMenu() { //http://stackoverflow.com/questions/5732058/best-swing-layout-for-2-dimensional-grid-of-buttons
         System.out.println("PanMainMenu");
         ExitListener exitListener = new ExitListener();
-        GameTypeListener gameTypeListener = new GameTypeListener();
+        gameTypeListener = new GameTypeListener();
         setBackground(Color.black);
 
         btn2x2 = new JButton("2 X 2");
@@ -56,18 +56,19 @@ public class PanMainMenu extends JPanel {
     }
 
     class GameTypeListener implements ActionListener {
-
+public PanEasy panEasy;
         public void actionPerformed(ActionEvent event) {
             JButton btn = (JButton) event.getSource();
             if (btn.getText().equals("2 X 2")) {
-                PanEasy panEasy = new PanEasy();
+                panEasy = new PanEasy();
                 Window w = SwingUtilities.getWindowAncestor(PanMainMenu.this); //http://stackoverflow.com/questions/10936306/programmatically-close-a-jpanel-which-is-displayed-in-jdialog
-                w.setVisible(false);
+                w.setVisible(false);  
             } else if (btn.getText().equals("3 X 3")) {
                 setBackground(new Color(0, 0, 204));
             } else if (btn.getText().equals("4 X 4")) {
                 setBackground(new Color(76, 0, 153));
             }
+            panEasy.buttonFlash();
         }
     }
 }

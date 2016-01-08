@@ -1,4 +1,4 @@
-package Game;
+package ButtonTestScratch;
 
 import java.io.FileNotFoundException;
 

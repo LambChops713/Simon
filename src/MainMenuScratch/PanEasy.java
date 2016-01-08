@@ -1,4 +1,4 @@
-package TrueSimon1;
+package MainMenuScratch;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,10 +10,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PanEasy extends JPanel implements KeyListener {
+
     Map<Character, Integer> map = new HashMap<>(); //https://github.com/Mrgfhci/Cards
+    PanProgressBar panProgressBar = new PanProgressBar();
+
     public PanEasy() {
-        PanProgressBar panProgressBar = new PanProgressBar();
-        add(panProgressBar, BorderLayout.SOUTH);
         System.out.println("PanEasy");
         JFrame frame = new JFrame("Simon");
         this.setLayout(new GridLayout(2, 2));
@@ -26,21 +27,23 @@ public class PanEasy extends JPanel implements KeyListener {
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);
+        add(panProgressBar, BorderLayout.SOUTH);
 
         final JButton GreenButton = new JButton();
+        UIManager.put("Button.select", new Color(51, 0, 0)); //http://www.dreamincode.net/forums/topic/181079-alterting-jbutton-selected-color/
         GreenButton.setBounds(0, 0, 300, 300);
         GreenButton.setBackground(Color.green);
 
         final JButton RedButton = new JButton();
-        RedButton.setBounds(300, 0, 600, 300);
+        RedButton.setBounds(300, 0, 300, 300);
         RedButton.setBackground(Color.red);
 
         final JButton YellowButton = new JButton();
-        YellowButton.setBounds(0, 300, 300, 600);
+        YellowButton.setBounds(0, 300, 300, 300);
         YellowButton.setBackground(Color.yellow);
 
         final JButton BlueButton = new JButton();
-        BlueButton.setBounds(300, 300, 600, 600);
+        BlueButton.setBounds(300, 300, 300, 300);
         BlueButton.setBackground(Color.blue);
 
 
@@ -59,7 +62,6 @@ public class PanEasy extends JPanel implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override

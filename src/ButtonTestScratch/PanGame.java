@@ -1,4 +1,4 @@
-package Game;
+package ButtonTestScratch;
 
 // this program will have a second button to change the background colour.
 import java.awt.*;

@@ -1,4 +1,4 @@
-package Game;
+package ButtonTestScratch;
 
 import javax.swing.*;
 import java.awt.*;
